@@ -6,8 +6,4 @@
 ~/.config/
 ~/ssh/config ssh/config
 
-- bspwm specific
-~/.config/rofi/ rofi/
-~/.config/picom/ picom/
-~/.config/bspwm/ bspwm/
-~/.config/dunst/ dunst/
+
