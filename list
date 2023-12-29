@@ -2,8 +2,7 @@
 ~/.config/kitty/ kitty/
 ~/.config/nvim/ nvim/
 ~/.config/spicetify/ spicetify/
-~/.zshrc/
-~/.config/
+~/.zshrc/ .zshrc
 ~/ssh/config ssh/config
 
 
