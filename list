@@ -3,6 +3,7 @@
 ~/.config/nvim/ nvim/
 ~/.config/spicetify/ spicetify/
 ~/.zshrc/ .zshrc
-~/ssh/config ssh/config
+~/.ssh/config .ssh/config
+
 
 
