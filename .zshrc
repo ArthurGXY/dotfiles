@@ -1,6 +1,5 @@
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:/home/artu/.local/bin"
-export clash_sub="https://www.ccsub.online/link/uAdv0jm3YFczPNLV?clash=1"
 source $HOME/.myconfigs/aliases
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
