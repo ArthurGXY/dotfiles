@@ -1,0 +1,68 @@
+#! /bin/sh
+
+## Fix java applications
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+# polkit-gnome-authentication-agent-1 & 
+fcitx5 &
+nm-applet &
+blueman-applet &
+pa-applet &
+dunst &
+picom --config ~/.config/bspwm/picom.conf &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+yakuake &
+# ~/.config/polybar/launch.sh &
+# flameshot &
+killall -q polybar
+if [[ $(xrandr -q | grep "HDMI-0 connected") ]]; then        
+        xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 \
+                --output DP-4 --mode 2560x1600 --right-of HDMI-0 --rate 165 --scale 0.8 
+        feh --bg-fill /home/artu/Pictures/Wallpaper/miku-penguin.png 
+        bspc wm -O HDMI-0 DP-4
+        bspc monitor HDMI-0 -d 1 2 3 4 5
+        bspc monitor DP-4 -d 6 7 8 9 0
+        $HOME/.config/polybar/launch.sh
+else
+        MONITOR="DP-4" polybar primary &
+        xrandr --output DP-4 --mode 2560x1440 --rate 165 
+        feh --bg-fill /home/artu/Pictures/Wallpaper/miku-penguin.png &
+        bspc monitor DP-4 -d 1 2 3 4 5
+fi
+
+
+bspc config border_width         2
+bspc config window_gap           3
+
+bspc config split_ratio          0.52
+bspc config focus_follows_pointer true
+bspc config pointer_modifier    mod1
+
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action2 resize_corner
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a Picture-in-Picture sticky=on desktop='^*' state=floating 
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a xpad sticky=on state=floating desktop=^*
+# autostart 
+
+# obsidian &
+sleep 2
+bspc desktop -f '^2'
+# firefox --new-window "http://192.168.0.110:8280" &
+sleep 2
+bspc desktop -f '^3'
+
+env DRI_PRIME=1  MESA_VK_DEVICE_SELECT=10de:1347 __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia clash-verge & 
+localsend &
+# env DRI_PRIME=1  MESA_VK_DEVICE_SELECT=10de:1347 __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia cinny & 
