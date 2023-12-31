@@ -1,9 +1,8 @@
 - general
 ~/.config/kitty/ kitty/
 ~/.config/nvim/ nvim/
-~/.config/spicetify/ spicetify/
+~/.config/spicetify/config-xpui.ini spicetify/config-xpui.ini
 ~/.zshrc .zshrc
-~/.ssh/config .ssh/config
 
 - hyprland
 ~/.config/code-flags.conf code-flags.conf
