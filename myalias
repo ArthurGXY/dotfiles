@@ -1,0 +1,6 @@
+alias vialias="nvim $HOME/.config/myalias"
+alias vihypr="nvim $HOME/.config/hypr/hyprland.conf"
+alias vizsh="nvim $HOME/.zshrc"
+alias viwb="nvim $HOME/.config/waybar/"
+alias vikitty="nvim $HOME/.config/kitty/kitty.conf"
+alias pxy="env http_proxy=localhost:7890"

@@ -5,5 +5,12 @@
 ~/.zshrc .zshrc
 ~/.ssh/config .ssh/config
 
-
+- hyprland
+~/.config/code-flags.conf code-flags.conf
+~/.config/electron13-flags.conf electron13-flags.conf
+~/.config/electron25-flags.conf electron25-flags.conf
+~/.config/myalias myalias
+~/.config/waybar/ waybar/
+~/.config/wpaperd/ wpaperd/
+~/.config/hypr/hyprland.conf hyprland.conf
 

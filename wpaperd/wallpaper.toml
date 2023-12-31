@@ -1,0 +1,18 @@
+[default]
+path = "/home/artu/Pictures/Wallpapers/"
+duration = "30m"
+sorting = "ascending"
+
+# apply-shadow = true
+[eDP-1]
+path = "/home/artu/Pictures/Wallpapers/"
+duration = "30m"
+
+[DP-4]
+path = "/home/artu/Pictures/Wallpapers/"
+duration = "30m"
+
+
+#[DP-2]
+#path = "/home/danyspin97/Pictures/Landscapes/"
+#sorting = "descending"
