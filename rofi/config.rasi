@@ -1,1 +1,15 @@
-@theme "/usr/share/rofi/themes/paper-float.rasi"
+/* @theme "/usr/share/rofi/themes/paper-float.rasi" */
+@theme "./paper-float.rasi"
+
+configuration {
+        combi-modes: [window,drun];
+        font: "FiraCodeNerdFont 16";
+        modes: [window,drun,run,ssh,combi];
+        drun-show-actions: true;
+        show-icons: true;
+        window {
+                format: "{w} | {c} | {t}";
+                close-on-delete: false;
+        }
+}
+
